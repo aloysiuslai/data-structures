@@ -9,19 +9,19 @@ var Stack = function() {
 var stackMethods = {
   storage: {},
   count: 0,
-  push: function(value){
+  push: function(value) {
     this.count++;
     this.storage[this.count] = value;
   },
 
-  pop: function(){
+  pop: function() {
     var result = this.storage[this.count];
     delete this.storage[this.count];
     this.count--;
     return result;
   },
 
-  size: function(){
+  size: function() {
     return this.count > 0 ? this.count : 0;
   },
 };
