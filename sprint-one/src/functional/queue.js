@@ -12,7 +12,7 @@ var Queue = function() {
   someInstance.enqueue = function(value) {
     count++;
     storage[last] = value;
-    last++
+    last++;
   };
 
   someInstance.dequeue = function() {
@@ -24,7 +24,7 @@ var Queue = function() {
   };
 
   someInstance.size = function() {
-    if (count < 0){
+    if (count < 0) {
       return 0;
     } else {
       return count;
