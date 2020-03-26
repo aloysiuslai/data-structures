@@ -6,25 +6,25 @@ var Queue = function() {
     count: 0,
     first: 0,
     last: 0,
-  }
+  };
   _.extend(object, queueMethods);
   return object;
 };
 
 var queueMethods = {
-  enqueue: function(value){
+  enqueue: function(value) {
     this.count++;
     this.storage[this.last] = value;
     this.last++;
   },
-  dequeue: function(){
+  dequeue: function() {
     var result = this.storage[this.first];
     delete this.storage[this.first];
     this.count--;
     this.first++;
     return result;
   },
-  size: function(){
+  size: function() {
     return this.count > 0 ? this.count : 0;
   }
 };
